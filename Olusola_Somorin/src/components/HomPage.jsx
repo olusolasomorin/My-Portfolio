@@ -2,8 +2,8 @@ import dp2 from '../assets/dp3.PNG';
 import { Mail } from 'lucide-react';
 import { Download } from 'lucide-react';
 import { Linkedin } from 'lucide-react';
-import { Github } from 'lucide-react';
-import { Twitter } from 'lucide-react';
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa6";
 
 
@@ -12,22 +12,26 @@ function HomePage() {
         {
             id: 'linkedin',
             Icon: Linkedin,
-            url: 'https://www.linkedin.com/in/olusola-somorin-b1212b230/'
+            url: 'https://www.linkedin.com/in/olusola-somorin-b1212b230/',
+            color: 'bg-[#0072b5] font-extrabold text-white'
         },
         {
             id: 'github',
-            Icon: Github,
-            url: 'https://github.com/olusolasomorin'
+            Icon: FaGithub,
+            url: 'https://github.com/olusolasomorin',
+            color: 'bg-black font-extrabold text-white'
         },
         {
             id: 'twitter',
-            Icon: Twitter,
-            url: 'https://x.com/only1_sola'
+            Icon: FaXTwitter,
+            url: 'https://x.com/only1_sola',
+            color: 'bg-black text-white font-bold'
         },
         {
             id: 'whatsapp',
             Icon: FaWhatsapp,
-            url: 'https://wa.me/+2349130411877'
+            url: 'https://wa.me/+2349130411877',
+            color: 'bg-green-700 text-white font-extrabold'
         }
     ]
 
@@ -201,16 +205,17 @@ function HomePage() {
                         </div>
 
                         <div className='flex gap-4 my-6 ml-4'>
-                            {socialMedia.map(({ id, Icon, url }) =>(
+                            {socialMedia.map(({ id, Icon, url, color }) =>(
                                 <a 
                                     key={id} 
                                     href={url}
                                     target='_blank'
                                     aria-label={`Link to ${id}`}
+                                    // className={color}
                                 >
                                     <Icon 
                                         size={45}
-                                        className='text-black bg-gray-300 px-2 py-2 rounded-lg hover:scale-110 transition-all duration-700'
+                                        className={`text-black ${color} px-2 py-2 rounded-lg hover:scale-110 transition-all duration-700`}
                                     />
                                 </a>
                             ))}
@@ -248,7 +253,7 @@ function HomePage() {
                     </button>
 
                     <div className='flex justify-center gap-4 my-8'>
-                        {socialMedia.map(({ id, Icon, url }) =>(
+                        {socialMedia.map(({ id, Icon, url, color }) =>(
                             <a 
                                 key={id} 
                                 href={url}
@@ -257,7 +262,7 @@ function HomePage() {
                             >
                                 <Icon 
                                     size={45}
-                                    className='text-black bg-gray-300 px-2 py-2 rounded-lg hover:scale-110 transition-all duration-700'
+                                    className={`text-black ${color} px-2 py-2 rounded-lg hover:scale-110 transition-all duration-700`}
                                 />
                             </a>
                         ))}
