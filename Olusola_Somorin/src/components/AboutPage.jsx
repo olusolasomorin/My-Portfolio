@@ -1,4 +1,4 @@
-import vid from './Realistic_Earth_Rotation_Animation.mp4'
+import vid from './vid2.mp4'
 
 function AboutPage() {
     return (

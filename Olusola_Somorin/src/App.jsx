@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import vid from './Digital_Code_Tunnel_Fly_Through.mp4';
+import vid from './bg_video.mp4';
 import Header from './components/Header';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
