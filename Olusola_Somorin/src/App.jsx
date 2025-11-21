@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import vid from './Digital_Code_Tunnel_Fly_Through.mp4';
 import Header from './components/Header';
-import HomePage from './components/Hompage';
+import HomePage from './components/Homepage';
 import AboutPage from './components/AboutPage';
 import ProjectPage from './components/ProjectPage';
 import Skills from './components/Skills';
