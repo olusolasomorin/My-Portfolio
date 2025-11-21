@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className='font-secondary'>
-      <video autoPlay muted playsInline loop className='fixed w-full h-full top-0 left-0 -z-10 object-cover brightness-[.15]'><source src={vid}/></video>
+      <video autoPlay muted playsInline loop className='fixed w-full h-full top-0 bottom-0 left-0 -z-10 object-cover brightness-[.15]'><source src={vid}/></video>
       
       <Header
         scrollToSection={scrollToSection} 
