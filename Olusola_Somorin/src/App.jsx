@@ -20,9 +20,9 @@ function App() {
 
   const [activeSection, setActiveSection] = useState('home');
 
-  // 2. Smooth Scroll Function (with Offset for Fixed Navbar)
+  
   const scrollToSection = (elementRef) => {
-    // Adjust this value based on your Navbar height (e.g., 80px)
+    
     const navbarHeight = 150; 
     
     const elementPosition = elementRef.current.getBoundingClientRect().top;
@@ -34,11 +34,11 @@ function App() {
     });
   };
 
-  // 3. Active Link Highlighting (Intersection Observer)
+  
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '-50% 0px -50% 0px', // Triggers when section is in middle of screen
+      rootMargin: '-50% 0px -50% 0px', 
       threshold: 0
     };
 
@@ -50,14 +50,14 @@ function App() {
       });
     }, options);
 
-    // Observe all sections
+  
     if (homeRef.current) observer.observe(homeRef.current);
     if (aboutRef.current) observer.observe(aboutRef.current);
     if (skillsRef.current) observer.observe(skillsRef.current);
     if (projectsRef.current) observer.observe(projectsRef.current);
     if (contactRef.current) observer.observe(contactRef.current);
 
-    return () => observer.disconnect(); // Cleanup
+    return () => observer.disconnect();
   }, []);
 
   return (

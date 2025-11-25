@@ -65,12 +65,12 @@ export default function Contact() {
 
         {/* Main Card */}
         <div className="relative bg-whte/5 backdrop-blur-5xl rounded-2xl shadow-2xl shadow-cyan-900/20 overflow-hidden">
-          {/* Subtle Gradient Border Effect */}
+          
           <div className="absolute inset-0 p-0.5 rounded-2xl bg-gradient-to-br from-cyan-400/30 via-transparent to-transparent"></div>
           
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2">
             
-            {/* Left Column: Get in Touch */}
+           
             <div className="p-6 sm:p-8 md:p-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 Get in Touch
