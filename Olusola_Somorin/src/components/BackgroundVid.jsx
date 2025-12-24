@@ -2,7 +2,7 @@ import vid from './bg_video.mp4'
 import vid2 from './Bg_Video.webm'
 const BackgroundVid = () => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       {/* Video Element */}
       {/* <video
         autoPlay
