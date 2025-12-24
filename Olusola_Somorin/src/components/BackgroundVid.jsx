@@ -17,7 +17,7 @@ const BackgroundVid = () => {
       </video> */}
 
       <video autoPlay muted loop playsInline className='bg-black fixed w-full h-full top-0 bottom-0 left-0 -z-10 object-cover brightness-[.15]'>
-            <source src={vid2} type='video/webm' />
+            {/* <source src={vid2} type='video/webm' /> */}
             <source src={vid} type="video/mp4" />
         </video>
     </div>
