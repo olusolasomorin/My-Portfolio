@@ -1,0 +1,11 @@
+google-genai
+pandas
+fastapi
+uvicorn
+dotenv
+pydantic
+pymysql
+SQLAlchemy
+pyJWT
+alembic
+openai
