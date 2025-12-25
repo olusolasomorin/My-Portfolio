@@ -62,7 +62,7 @@ function HomePage() {
                     
                     <a 
                         href="/Olusola_CV.pdf"
-                        download="Olusola_Somorin_CV.pdf"
+                        // download="Olusola_Somorin_CV.pdf"
                         target="_blank"
                         className='flex gap-2 justify-center bg-cyan-400 py-5 text-xl font-semibold rounded-xl mx-5 mt-10 hover:bg-cyan-300 cursor-pointer hover:scale-105 transition-all duration-1000'
                     >
