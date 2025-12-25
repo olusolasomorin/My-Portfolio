@@ -64,7 +64,6 @@ function HomePage() {
                             href="/Olusola_CV.pdf"
                             download="Olusola_Somorin_CV.pdf"
                             target="_blank"
-                            rel="noopener noreferrer"
                             className='flex gap-2'
                         >
                             <Download/>
