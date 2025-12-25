@@ -62,7 +62,7 @@ function HomePage() {
                     
                     <a 
                         href="/Olusola_CV.pdf"
-                        // download="Olusola_Somorin_CV.pdf"
+                        download="Olusola_Somorin_CV.pdf"
                         target="_blank"
                         className='flex gap-2 justify-center bg-cyan-400 py-5 text-xl font-semibold rounded-xl mx-5 mt-10 hover:bg-cyan-300 cursor-pointer hover:scale-105 transition-all duration-1000'
                     >
@@ -71,9 +71,9 @@ function HomePage() {
                     </a>
                     
 
-                    <button className='text-cyan-400 py-5 mx-5 mt-4 text-xl font-semibold border-2 border-cyan-400 rounded-xl hover:bg-cyan-300 hover:text-black cursor-pointer hover:border-0 hover:scale-105 transition-all duration-1000'>
+                    <a href='/Olusola_CV.pdf' target='_blank' className='text-cyan-400 text-center py-5 mx-5 mt-4 text-xl font-semibold border-2 border-cyan-400 rounded-xl hover:bg-cyan-300 hover:text-black cursor-pointer hover:border-0 hover:scale-105 transition-all duration-1000'>
                         Preview Resume
-                    </button>
+                    </a>
                 </div>
 
                 <div className='flex flex-col w-1/2'>
@@ -257,10 +257,15 @@ function HomePage() {
                         somorinolusola1@gmail.com
                     </p>
 
-                    <button className='flex gap-2 justify-center bg-cyan-400 py-5 text-xl font-semibold rounded-xl mx-9 mt-10 hover:bg-cyan-300 cursor-pointer hover:scale-105 transition-all duration-1000'>
-                        <span> <Download/> </span>
+                    <a 
+                        href="/Olusola_CV.pdf"
+                        download="Olusola_Somorin_CV.pdf"
+                        target="_blank"
+                        className='flex gap-2 justify-center bg-cyan-400 py-5 text-xl font-semibold rounded-xl mx-5 mt-10 hover:bg-cyan-300 cursor-pointer hover:scale-105 transition-all duration-1000'
+                    >
+                        <Download/>
                         Download Resume
-                    </button>
+                    </a>
 
                     <div className='flex justify-center gap-4 my-8'>
                         {socialMedia.map(({ id, Icon, url, color }) =>(
