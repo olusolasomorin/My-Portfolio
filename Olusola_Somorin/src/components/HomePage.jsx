@@ -59,7 +59,7 @@ function HomePage() {
                         somorinolusola1@gmail.com
                     </p>
 
-                    <button className='flex gap-2 justify-center bg-cyan-400 py-5 text-xl font-semibold rounded-xl mx-5 mt-10 hover:bg-cyan-300 cursor-pointer hover:scale-105 transition-all duration-1000'>
+                    <div className='flex gap-2 justify-center bg-cyan-400 py-5 text-xl font-semibold rounded-xl mx-5 mt-10 hover:bg-cyan-300 cursor-pointer hover:scale-105 transition-all duration-1000'>
                         <a 
                             href="/Olusola_CV.pdf"
                             download="Olusola_Somorin_CV.pdf"
@@ -70,7 +70,7 @@ function HomePage() {
                             <Download/>
                             Download Resume
                         </a>
-                    </button>
+                    </div>
 
                     <button className='text-cyan-400 py-5 mx-5 mt-4 text-xl font-semibold border-2 border-cyan-400 rounded-xl hover:bg-cyan-300 hover:text-black cursor-pointer hover:border-0 hover:scale-105 transition-all duration-1000'>
                         Preview Resume
