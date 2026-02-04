@@ -66,11 +66,23 @@ function Ai() {
         }
     };
 
+    const openModal = () => {
+        setIsChatOpen(true);
+        // Prevent background scrolling when modal is open
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        setIsChatOpen(null);
+        // Restore background scrolling
+        document.body.style.overflow = 'unset';
+    };
+
     return (
         <div>
             <div className="fixed bottom-6 right-6 z-50">
                 <button
-                onClick={() => setIsChatOpen(true)} // Always opens the modal
+                onClick={() => openModal(true)} // Always opens the modal
                 className="w-16 h-16 bg-cyan-400 hover:bg-cyan-400 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.6)] flex items-center justify-center text-black transition-all hover:scale-110 active:scale-95 cursor-pointer"
                 >
                 <BotMessageSquare size={38} />
@@ -81,35 +93,35 @@ function Ai() {
             {isChatOpen && (
                 // Overlay and Centering container. Clicking here closes the modal.
                 <div 
-                className="fixed inset-0 z-100 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
-                onClick={() => setIsChatOpen(false)} // Close modal when clicking outside
+                className="fixed inset-0 z-100 bg-black/50 backdrop-blur-md flex items-center justify-center p-4"
+                onClick={closeModal} // Close modal when clicking outside
                 >
                     
                     {/* Modal Content container */}
                     <div 
-                        className="w-full max-w-lg bg-white/ backdrop-blur-xl border border-gray-700 rounded-xl shadow-2xl shadow-gray-500/400 flex flex-col overflow-hidden h-[90vh] md:h-[600px] 
+                        className="w-full max-w-lg bg-black/50 backdrop-blur-md border border-cyan-900 rounded-xl shadow-2xl shadow-gray-500/400 flex flex-col overflow-hidden h-[90vh] md:h-[600px] 
                                 animate-in zoom-in-95 fade-in duration-300"
                         // Prevent overlay click from closing the modal when clicking inside the chat box
                         onClick={(e) => e.stopPropagation()}
                     >
                         
                         {/* Chat Header */}
-                        <div className="bg-white/ backdrop-blur-xl border-b border-gray-700 p-4 flex justify-between items-center shrink-0">
+                        <div className="bg-black/50 backdrop-blur-md border-b border-cyan-900 p-4 flex justify-between items-center shrink-0">
                             <div className="flex items-center gap-2">
                                 <Bot className="text-white" size={20} />
                                 <h3 className="font-bold text-cyan-400">Olusola's AI Assistant</h3>
                             </div>
                             {/* Close Button */}
                             <button 
-                                onClick={() => setIsChatOpen(false)} 
-                                className="text-gray-300 hover:text-white p-1 rounded-full hover:bg-cyan-700 transition-colors"
+                                onClick={closeModal} 
+                                className="text-gray-300 hover:text-cyan-400 p-1 cursor-pointer rounded-full md:hover:scale-120 transition-all duration-300"
                             >
                                 <X size={18} />
                             </button>
                         </div>
 
                         {/* Chat Messages Area */}
-                        <div className="flex-1 p-4 overflow-y-auto bg-white/2 backdrop-blur-xl flex flex-col gap-3">
+                        <div className="flex-1 p-4 overflow-y-auto bg-black/50 backdrop-blur-md flex flex-col gap-3">
                             {messages.map((msg) => (
                                 <div 
                                 key={msg.id} 
@@ -146,7 +158,7 @@ function Ai() {
                         </div>
 
                         {/* Chat Input Area */}
-                        <form onSubmit={handleSendMessage} className="p-3 bg-white/ backdrop-blur-xl border-t border-gray-700 flex gap-2 shrink-0">
+                        <form onSubmit={handleSendMessage} className="p-3 bg-black/50 backdrop-blur-md border-t border-gray-700 flex gap-2 shrink-0">
                             <input
                                 type="text"
                                 value={chatInput}
@@ -156,7 +168,7 @@ function Ai() {
                             />
                             <button 
                                 type="submit" 
-                                className="bg-cyan-400 hover:bg-cyan-300 text-black p-2 rounded-lg transition-colors duration-500"
+                                className="bg-cyan-400 hover:bg-cyan-300 text-black p-2 rounded-lg transition-colors cursor-pointer duration-500"
                                 disabled={!chatInput.trim()}
                             >
                                 <Send size={18} />

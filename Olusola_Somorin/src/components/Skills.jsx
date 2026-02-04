@@ -53,7 +53,7 @@ function Skills() {
             </h2>
             <div className="grid md:grid-cols-2 gap-9">
                 {skillSections.map((skill) => (
-                    <div key={skill.title} className="text-white border-1 border-gray-700 bg-white/5 backdrop-blur-xl  mx-auto md:max-w-xl w-full p-8 rounded-xl shadow-2xl">
+                    <div key={skill.title} className="text-white border border-gray-700 bg-white/5 backdrop-blur-xl  mx-auto md:max-w-xl w-full p-8 rounded-xl shadow-2xl">
                         <div className="font-semibold text-xl mb-5 text-center text-gray-300">{skill.title}</div>
                         <div className="flex gap-4 flex-wrap justify-center">
                             {skill.skills.map((ski, index) => (
