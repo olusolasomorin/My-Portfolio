@@ -9,6 +9,7 @@ import { VscVscode } from "react-icons/vsc";
 import { IoLogoVercel } from "react-icons/io5";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaPython } from "react-icons/fa";
+import { SiLangchain, SiGooglecloud, SiFastapi } from "react-icons/si";
 
 
 function Skills() {
@@ -24,7 +25,8 @@ function Skills() {
             title: "Backend & Database",
             skills: [
             { name: "Firebase", icon: SiFirebase, color: "text-red-600" },
-            { name: "MySQL", icon: SiMysql, color: "text-blue-500" }
+            { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
+            { name: "FastAPI", icon: SiFastapi, color: "text-green-500" }
             ],
         },
         {
@@ -34,7 +36,10 @@ function Skills() {
             { name: "GitHub", icon: Github, color: "text-white" },
             { name: "Postman", icon: SiPostman, color: "text-orange-500" },
             { name: "VS Code", icon: VscVscode, color: "text-blue-500" },
-            { name: "Vercel", icon: IoLogoVercel, color: "text-black" }
+            { name: "Vercel", icon: IoLogoVercel, color: "text-black" },
+            { name: "LangChain", icon: SiLangchain, color: "text-green-500" },
+            { name: "LangGraph", icon: SiLangchain, color: "text-green-500" },
+            { name: "Google APIs", icon: SiGooglecloud, color: "text-blue-500" }
             ],
         },
         {
@@ -57,7 +62,7 @@ function Skills() {
                         <div className="font-semibold text-xl mb-5 text-center text-gray-300">{skill.title}</div>
                         <div className="flex gap-4 flex-wrap justify-center">
                             {skill.skills.map((ski, index) => (
-                                <div key={index} className="bg-white/ hover:bg-gray-700 transition-all duration-800 backdrop-blur-xl flex flex-col flex-wrap justify-center text-gray-200 text-[14px] items-center w-[110px] w-full p-4 rounded-2xl">
+                                <div key={index} className="bg-white/ hover:bg-gray-700 transition-all duration-800 backdrop-blur-xl flex flex-col flex-wrap justify-center text-gray-200 text-[14px] items-center w-full p-4 rounded-2xl">
                                     <div className={ski.color}>
                                         <ski.icon size={30}/>
                                     </div>
